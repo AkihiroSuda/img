@@ -429,7 +429,7 @@
     "libcontainer/user",
     "libcontainer/utils"
   ]
-  revision = "688ce5349f709d7d9032fc9d1844ad54a2eff51d"
+  revision = "a8356f2fc7b2d60704f3198b562663c03a032eb9"
   source = "github.com/AkihiroSuda/runc"
 
 [[projects]]
@@ -632,6 +632,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "ff72564789b8f21395408d0a1e2ce04a810cc6251358ea95fc1b07cbe6faac33"
+  inputs-digest = "31beeaa4c59fe439eddf922494723bf82bc57f780834ce035453d3fbcb5cf9d4"
   solver-name = "gps-cdcl"
   solver-version = 1

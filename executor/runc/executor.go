@@ -105,7 +105,7 @@ func (w *Executor) Exec(ctx context.Context, meta executor.Meta, root cache.Moun
 
 	} else {
 		rootFSPath = filepath.Join(bundle, "rootfs")
-		if err := os.Mkdir(rootFSPath, 0700); err != nil {
+		if err := os.Mkdir(rootFSPath, 0755); err != nil {
 			return fmt.Errorf("failed to create directory at %s: %v", rootFSPath, err)
 		}
 
@@ -155,7 +155,7 @@ func (w *Executor) Exec(ctx context.Context, meta executor.Meta, root cache.Moun
 	if w.unprivileged {
 		// Make sure the spec is rootless.
 		// Only if we are not running as root.
-		specconv.ToRootless(spec, &specconv.RootlessOpts{MapSubUIDGID: false})
+		specconv.ToRootless(spec, &specconv.RootlessOpts{MapSubUIDGID: true})
 		// Remove the cgroups path.
 		spec.Linux.CgroupsPath = ""
 	}
